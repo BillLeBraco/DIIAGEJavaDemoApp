@@ -9,6 +9,10 @@ public interface QuoteRepository {
     PagingSource<Integer, Quote> getAll();
     LiveData<Quote> getById(Long id);
 
+    LiveData<Integer> getNumberOfQuotes();
+    LiveData<Integer> getDistinctSources();
+    LiveData<Quote> getLastQuote();
+
     Long create(Quote quote);
     void update(Quote quote);
     void delete(Quote quote);
